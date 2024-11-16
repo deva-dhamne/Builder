@@ -15,18 +15,4 @@
             return $"Airplane with {Engine}, {Wings}, {Cockpit}, and {LandingGear}";
         }
     }
-
-    public class Client
-    {
-        public void Execute()
-        {
-            IAirplaneBuilder builder = new PassengerAirplaneBuilder();
-            AirplaneDirector director = new AirplaneDirector(builder);
-
-            director.ConstructAirplane();
-
-            Airplane airplane = builder.GetAirplane();
-            Console.WriteLine(airplane);
-        }
-    }
 }
